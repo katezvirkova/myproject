@@ -42,6 +42,7 @@ def generate_pairs_view(request):
     error = validate_players(players)
 
     if error:
+
         return render(request, 'christmas/santa.html', {'players': players, 'error': error})
     pairs = generate_pairs(players)
     request.session['players'] = []
