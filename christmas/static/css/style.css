@@ -1,0 +1,178 @@
+@keyframes flash {
+    0% { color: #00eaff; }
+    25% { color: #8582ff; }
+    50% { color: #4338ef; }
+    75% { color: #1a1ce1; }
+    100% { color: #051265; }
+}
+
+body {
+    background-image: url('../images/img.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Andale Mono", serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 400px;
+    color: #00e1ff;
+    font-family: "Avenir Next", serif;
+    margin: 0;
+    animation: flash 3s infinite;
+}
+
+.button {
+    font-size: 60px;
+    background-color: #000000;
+    color: #00e1ff;
+}
+
+body {
+    background-image: url('../images/img.png' );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: red;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #79d8e4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.players-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.players-list li {
+    margin: 10px 0;
+}
+
+.input-group {
+    margin-bottom: 30px;
+}
+
+.input-group input {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.back-button {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #051265;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.no-players {
+    font-size: 18px;
+    color: #607bd3;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+
+body {
+    background-image: url('../images/img.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #b1f6f6;
+    border-radius: 5px;
+}
+
+button {
+    font-size: 20px;
+    background-color: #5fd5d5;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #4ac2c2;
+}

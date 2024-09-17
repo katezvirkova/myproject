@@ -4,56 +4,7 @@
     <meta charset="UTF-8">
     {% load static %}
     <title>Secret Santa Results</title>
-    <style>
-        body {
-            background-image: url("{% static 'images/img.png' %}");
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat; 
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .container {
-            text-align: center;
-            background: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            max-width: 600px;
-            width: 100%;
-        }
-        h1 {
-            font-size: 30px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        ul li {
-            font-size: 20px;
-            margin: 10px;
-            padding: 10px;
-            background-color: #b1f6f6;
-            border-radius: 5px;
-        }
-        button {
-            font-size: 20px;
-            background-color: #5fd5d5;
-            color: #000000;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        button:hover {
-            background-color: #4ac2c2;
-        }
-    </style>
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <div class="container">
