@@ -88,7 +88,7 @@
             <div class="error">{{ error }}</div>
         {% endif %}
 
-        <form method="post">
+        <form method="post" action="{% url 'christmas:secret_santa_home' %}">
             {% csrf_token %}
             <div class="input-group">
                 <label>
@@ -105,11 +105,9 @@
                     <li>{{ player }}</li>
                 {% endfor %}
             </ul>
-            <form method="post">
+            <form method="post" action="{% url 'christmas:generate_pairs' %}">
                 {% csrf_token %}
-                <button type="submit" name="generate_pairs" class="button">
-                    Generate 
-                </button>
+                <button type="submit" class="button">Generate Pairs</button>
             </form>
         {% else %}
             <p class="no-players">No players added yet</p>
@@ -117,4 +115,5 @@
         
     </div>
 </body>
+
 </html>

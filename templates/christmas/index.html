@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-     {% load static %}
+    {% load static %}
     <title>Is it Christmas Today?</title>
     <style>
         @keyframes flash {
@@ -14,8 +14,8 @@
         }
         body {
             background-image: url("{% static 'images/img.png' %}");
-            background-size: cover; 
-            background-position: center; 
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
             display: flex;
             flex-direction: column;
@@ -29,21 +29,27 @@
         p {
             font-size: 400px;
             color: #00e1ff;
-            font-family: "Avenir Next", serif; 
+            font-family: "Avenir Next", serif;
             margin: 0;
-            animation: flash 3s infinite
+            animation: flash 3s infinite;
         }
         .button {
-                 font-size: 60px;
-                 background-color: #000000;
-                 color: #00e1ff;
-         }
+            font-size: 60px;
+            background-color: #000000;
+            color: #00e1ff;
+        }
     </style>
 </head>
 <body>
     <h1>Is it Christmas Today?</h1>
-    <p>{{ is_christmas }}</p>
+    <p>
+        {% if is_christmas %}
+            Yes!
+        {% else %}
+            No!
+        {% endif %}
+    </p>
     <a href="{% url 'christmas:secret_santa_home' %}"><button type="button" class="button">Play!</button></a>
-
 </body>
+
 </html>

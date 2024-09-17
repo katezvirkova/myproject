@@ -60,7 +60,7 @@
         <h1>Secret Santa Results</h1>
         <ul>
             {% for giver, receiver in pairs.items %}
-                <li>{{ giver }} gives a gift  {{ receiver }}</li>
+                <li>{{ giver }} gives a gift to {{ receiver }}</li>
             {% endfor %}
         </ul>
         <a href="{% url 'christmas:secret_santa_home' %}">
@@ -68,4 +68,5 @@
         </a>
     </div>
 </body>
+
 </html>
