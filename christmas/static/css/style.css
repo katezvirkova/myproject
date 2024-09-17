@@ -39,7 +39,6 @@ p {
 }
 
 body {
-    background-image: url('../images/img.png' );
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -73,9 +72,9 @@ h1 {
 
 .button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 20px;
     color: #fff;
-    background-color: #79d8e4;
+    background-color: #0b1880;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -123,7 +122,6 @@ h1 {
 
 
 body {
-    background-image: url('../images/img.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
