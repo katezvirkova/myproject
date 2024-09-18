@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    {% load static %}
+    <title>Secret Santa Results</title>
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-
+    <div class="container">
+        <h1>Secret Santa Results</h1>
+        <ul>
+            {% for giver, receiver in pairs.items %}
+                <li>{{ giver }} gives a gift to {{ receiver }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'christmas:secret_santa_home' %}">
+            <button type="button">Go back</button>
+        </a>
+    </div>
 </body>
+
 </html>
+

@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    {% load static %}
+    <title>Is it Christmas Today?</title>
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-
+    <h1>Is it Christmas Today?</h1>
+    <p>
+        {% if is_christmas %}
+            Yes!
+        {% else %}
+            No!
+        {% endif %}
+    </p>
+    <a href="{% url 'christmas:secret_santa_home' %}"><button type="button" class="button">Play!</button></a>
 </body>
 </html>
+
+
+

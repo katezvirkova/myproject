@@ -2,9 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    {% load static %}
+    <title>Secret Santa</title>
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+  <a href="{% url 'christmas:index' %}" class="back-button">Back</a>
+    <div class="container">
+        <h1>Secret Santa</h1>
 
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+
+        <form method="post" action="{% url 'christmas:secret_santa_home' %}">
+            {% csrf_token %}
+            <div class="input-group">
+                <label>
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                </label>
+                <button type="submit" class="button">Add Player</button>
+            </div>
+        </form>
+
+        {% if players %}
+            <h2>Players List:</h2>
+            <ul class="players-list">
+                {% for player in players %}
+                    <li>{{ player }}</li>
+                {% endfor %}
+            </ul>
+            <form method="post" action="{% url 'christmas:generate_pairs' %}">
+                {% csrf_token %}
+                <button type="submit" class="button">Generate Pairs</button>
+            </form>
+        {% else %}
+            <p class="no-players">No players added yet</p>
+        {% endif %}
+
+    </div>
 </body>
+
 </html>
